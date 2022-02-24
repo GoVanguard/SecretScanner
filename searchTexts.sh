@@ -61,6 +61,7 @@ searchTermsAnyCase=(
     'SAML'
 )
 
+## Want to add something? Refer to https://linuxize.com/post/regular-expressions-in-grep/ for deets ##
 searchTermsRegEx=(
     'api_?.*key'
     'auth_?.*key'
