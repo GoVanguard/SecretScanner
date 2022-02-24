@@ -3,13 +3,14 @@
 if [ "$#" -lt 1 ] || [ "$#" -gt 1 ]
 then
     echo  "Usage: ./searchTexts.sh /my/path/"
+    echo -e "\e[33mUsage: ./searchTexts.sh /my/path/\e[0m"
     exit 1
 else
     echo -e "\c"
 fi
 
 if [ ! -d "$1" ]; then
-    echo "Get real. $1 doesn't exist."
+    echo -e "\e[31mGet real. $1 doesn't exist.\e[0m"
     exit 1
 fi
 
