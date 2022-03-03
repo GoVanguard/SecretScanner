@@ -14,6 +14,14 @@ if [ ! -d "$1" ]; then
     exit 1
 fi
 
+echo -e "\e[31m############################## NOTE ##############################\e[0m"
+echo -e "\e[31m###     This tool will produce false positives.                ###\e[0m"
+echo -e "\e[31m###     False positives are preferable to false negatives.     ###\e[0m"
+echo -e "\e[31m###     Take your time and read the hits carefully.            ###\e[0m"
+echo -e "\e[31m###     Make absolutely sure your console scrollback is        ###\e[0m"
+echo -e "\e[31m###     sufficiently large OR redirect to a text document.     ###\e[0m"
+echo -e "\e[31m############################## NOTE ##############################\e[0m"
+
 searchTermsCase=(
     'AKIA'
     'ASIA'
@@ -80,24 +88,26 @@ searchTermsRegEx=(
 )
 
 
+grepOpts="-n -I -H -R"
+
 for term in ${searchTermsRegEx[@]}
     do
-        echo ""
-        echo "Searching (regex term) ${term}..."
-        grep -E ${term} $1* -R
+        echo " "
+        echo -e "\e[32mSearching (regex term) ${term}...\e[0m"
+        grep ${grepOpts} -E ${term} $1* | grep -v "\.png" | grep -v "\.svg" | grep -v "\.js" | grep -v "node_modules"
     done
 
 for term in ${searchTermsCase[@]}
     do
-        echo ""
-        echo "Searching (cased) ${term}..."
-        grep -e ${term} $1* -R
+        echo " "
+        echo -e "\e[32mSearching (cased) ${term}...\e[0m"
+        grep ${grepOpts} -e ${term} $1* | grep -v "\.png" | grep -v "\.svg" | grep -v "\.js" | grep -v "node_modules"
     done
 
 
 for term in ${searchTermsAnyCase[@]}
     do
-        echo ""
-        echo "Searching (case insensitive) ${term}..."
-        grep -e ${term} $1* -Ri
+        echo " "
+        echo -e "\e[32mSearching (case insensitive) ${term}...\e[0m"
+        grep ${grepOpts} -e ${term} $1* -i | grep -v "\.png" | grep -v "\.svg" | grep -v "\.js" | grep -v "node_modules"
     done
