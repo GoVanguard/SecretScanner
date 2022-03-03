@@ -4,7 +4,7 @@ Searches for common keys and secrets in a stupidly simple way.
 
 Notes:
  - This can take time on large structures.
- - Yes, it's slow.
+ - Yes, it's slow. I don't care if you have a better way.
  - Yes, it produces false positives.
  - Make absolutely sure your console scrollback is
    sufficiently large OR redirect to a text document.
