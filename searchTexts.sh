@@ -2,7 +2,6 @@
 
 if [ "$#" -lt 1 ] || [ "$#" -gt 1 ]
 then
-    echo  "Usage: ./searchTexts.sh /my/path/"
     echo -e "\e[33mUsage: ./searchTexts.sh /my/path/\e[0m"
     exit 1
 else
