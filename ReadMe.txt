@@ -5,7 +5,8 @@ Searches for common keys and secrets in a stupidly simple way.
 Notes:
  - This can take time on large structures.
  - Yes, it's slow. I don't care if you have a better way.
- - Yes, it produces false positives.
+ - This tool will find all references of a value.
+ - Yes, it produces false positives as a result of the above.
  - Make absolutely sure your console scrollback is
    sufficiently large OR redirect to a text document.
  - Take your time and read the hits carefully.
@@ -14,15 +15,43 @@ Notes:
 Setup:
  - Git clone repo
  - Cd into directory
- - chmod a+x searchTexts.sh and testMe.sh
+ - chmod a+x searchTexts.sh, testMe.sh, testMeNoisy.sh
 
 Usage:
-./searchTexts.sh /your/path/
+./searchTexts.sh /your/path/ [noisy]
 
-Example Output:
+Supply the optional noisy parameter last to include the noisy,
+high false postive tests. This can be useful for javascript and,
+other similar cases where term ambiguity can produce a lot of 
+results to look at.
 
+Example Output 1:
+./searchTexts.sh ./fixtures
+
+############################## NOTE ########## ###################
+###     This tool will find all references of a value.         ###
+###     Consequently it will produce false positives.          ###
+###     False positives are preferable to false negatives.     ###
+###     Take your time and read the hits carefully.            ###
+###     Make absolutely sure your console scrollback is        ###
+###     sufficiently large OR redirect to a text document.     ###
 ############################## NOTE ##############################
-###     This tool will produce false positives.                ###
+
+Searching (cased) AKIA...
+./fixtures/.aws/credentials:7:aws_access_key_id = AKIAHARDCODEDACCKEY7
+./fixtures/aws.json:9:    "aws_id": "AKIAHI38FAKE1IWUQEEN",
+./fixtures/aws.xml:10:    <aws_id>AKIAHI38FAKE1IWUQEEN</aws_id>
+./fixtures/aws.yml:8:aws_id: AKIAHI38FAKE1IWUQEEN
+./fixtures/severity.yml:2:  aws_id: AKIAHI38FAKE1IWUQEEN
+
+
+Example Output [noisy]:
+
+./searchTexts.sh ./fixtures noisy
+
+############################## NOTE ########## ###################
+###     This tool will find all references of a value.         ###
+###     Consequently it will produce false positives.          ###
 ###     False positives are preferable to false negatives.     ###
 ###     Take your time and read the hits carefully.            ###
 ###     Make absolutely sure your console scrollback is        ###
