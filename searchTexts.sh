@@ -10,6 +10,11 @@ else
 fi
 
 if [ ! -d "$1" ]; then
+    if [ -f "$1" ]; then
+        echo -e "\e[31m$1 is a file or expression.\e[0m"
+        echo -e "\e[31mPlease point to the parent directory to recursively search.\e[0m"
+        exit 1
+    fi
     echo -e "\e[31mGet real. $1 doesn't exist.\e[0m"
     exit 1
 fi
