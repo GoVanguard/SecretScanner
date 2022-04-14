@@ -114,7 +114,7 @@ then
             echo -e "\e[32mSearching (regex term) ${term}...\e[0m"
 
             IFS=""
-            files=$(find $1 -type f -print | xargs --null)
+            files=$(find $1 -type f)
             IFS=${O_IFS}
             for filename in ${files[@]}
             do
@@ -131,7 +131,7 @@ then
 
 
             IFS=""
-            files=$(find $1 -type f -print | xargs --null)
+            files=$(find $1 -type f)
             IFS=${O_IFS}
             for filename in ${files[@]}
             do
@@ -148,7 +148,7 @@ for term in ${searchTermsCase[@]}
         echo -e "\e[32mSearching (cased) ${term}...\e[0m"
 
         IFS=""
-        files=$(find $1 -type f -print | xargs --null)
+        files=$(find $1 -type f)
         IFS=${O_IFS}
         for filename in ${files[@]}
         do
