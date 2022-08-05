@@ -16,6 +16,15 @@ Setup:
  - Git clone repo
  - Cd into directory
  - chmod a+x searchTexts.sh, testMe.sh, testMeNoisy.sh
+ - apt-get install parallel -y
+ - parallel --citation
+ - type 'will cite'
+
+Outputs:
+ - All results will be placed into a file named 'results' under the
+   path scanned.
+ - Use 'cat' to display the results of a test. The files are full of
+   tagging for coloring of text.
 
 Usage:
 ./searchTexts.sh /your/path/ [noisy]
@@ -25,8 +34,19 @@ high false postive tests. This can be useful for javascript and,
 other similar cases where term ambiguity can produce a lot of 
 results to look at.
 
-Example Output 1:
-./searchTexts.sh ./fixtures
+Example Runtime Output:
+############################## NOTE ########## ###################
+###     This tool will find all references of a value.         ###
+###     Consequently it will produce false positives.          ###
+###     False positives are preferable to false negatives.     ###
+###     Take your time and read the hits carefully.            ###
+###     Make absolutely sure your console scrollback is        ###
+###     sufficiently large OR redirect to a text document.     ###
+############################## NOTE ##############################
+
+
+ Results in ./fixtures/results
+
 
 ############################## NOTE ########## ###################
 ###     This tool will find all references of a value.         ###
@@ -36,6 +56,10 @@ Example Output 1:
 ###     Make absolutely sure your console scrollback is        ###
 ###     sufficiently large OR redirect to a text document.     ###
 ############################## NOTE ##############################
+
+Example results from ./searchTexts.sh ./fixtures
+
+cat ./fixtures/results
 
 Searching (cased) AKIA...
 ./fixtures/.aws/credentials:7:aws_access_key_id = AKIAHARDCODEDACCKEY7
@@ -45,18 +69,9 @@ Searching (cased) AKIA...
 ./fixtures/severity.yml:2:  aws_id: AKIAHI38FAKE1IWUQEEN
 
 
-Example Output [noisy]:
+Example results from ./searchTexts.sh ./fixtures noisy
 
-./searchTexts.sh ./fixtures noisy
-
-############################## NOTE ########## ###################
-###     This tool will find all references of a value.         ###
-###     Consequently it will produce false positives.          ###
-###     False positives are preferable to false negatives.     ###
-###     Take your time and read the hits carefully.            ###
-###     Make absolutely sure your console scrollback is        ###
-###     sufficiently large OR redirect to a text document.     ###
-############################## NOTE ##############################
+cat ./fixtures/results
 
 Searching (regex term) api_?.*key...
 ./fixtures/apikeys.xml:5:    <api_endpoint>/apikey/</api_endpoint>

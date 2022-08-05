@@ -1,0 +1,66 @@
+
+[32mSearching (cased) AKIA...[0m
+[35m[K./fixtures/.aws/credentials[m[K[36m[K:[m[K[32m[K7[m[K[36m[K:[m[Kaws_access_key_id = [01;31m[KAKIA[m[KHARDCODEDACCKEY7
+[35m[K./fixtures/aws.json[m[K[36m[K:[m[K[32m[K9[m[K[36m[K:[m[K    "aws_id": "[01;31m[KAKIA[m[KHI38FAKE1IWUQEEN",
+[35m[K./fixtures/aws.xml[m[K[36m[K:[m[K[32m[K10[m[K[36m[K:[m[K    <aws_id>[01;31m[KAKIA[m[KHI38FAKE1IWUQEEN</aws_id>
+[35m[K./fixtures/aws.yml[m[K[36m[K:[m[K[32m[K8[m[K[36m[K:[m[Kaws_id: [01;31m[KAKIA[m[KHI38FAKE1IWUQEEN
+[35m[K./fixtures/results-AKIA[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KAKIA[m[K...[0m
+[35m[K./fixtures/results-AKIA[m[K[36m[K:[m[K[32m[K2[m[K[36m[K:[m[K[35m[K./fixtures/.aws/credentials[m[K[36m[K:[m[K[32m[K7[m[K[36m[K:[m[Kaws_access_key_id = [01;31m[K[01;31m[KAKIA[m[K[m[KHARDCODEDACCKEY7
+[35m[K./fixtures/severity.yml[m[K[36m[K:[m[K[32m[K2[m[K[36m[K:[m[K  aws_id: [01;31m[KAKIA[m[KHI38FAKE1IWUQEEN
+[32mSearching (cased) ASIA...[0m
+[35m[K./fixtures/results-ASIA[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KASIA[m[K...[0m
+[32mSearching (cased) CLIENT_SECRET...[0m
+[35m[K./fixtures/results-CLIENT_SECRET[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KCLIENT_SECRET[m[K...[0m
+[32mSearching (cased) MII...[0m
+[35m[K./fixtures/results-MII[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KMII[m[K...[0m
+[32mSearching (cased) eyJ...[0m
+[35m[K./fixtures/.npmrc[m[K[36m[K:[m[K[32m[K9[m[K[36m[K:[m[K//artifactory.jfrog.com/artifactory/api/npm/npm/:_authToken=eyFake1.[01;31m[KeyJ[m[KFake2.Fake3.hardcoded
+[35m[K./fixtures/results-eyJ[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KeyJ[m[K...[0m
+[32mSearching (cased) SHA 1...[0m
+[35m[K./fixtures/results-SHA 1[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KSHA 1[m[K...[0m
+[32mSearching (cased) SHA 256...[0m
+[35m[K./fixtures/results-SHA 256[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KSHA 256[m[K...[0m
+[32mSearching (cased) sq0csp-...[0m
+[35m[K./fixtures/results-sq0csp-[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[Ksq0csp-[m[K...[0m
+[32mSearching (cased) Authorization...[0m
+[35m[K./fixtures/results-Authorization[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KAuthorization[m[K...[0m
+[35m[K./fixtures/results-X-Amzn-Authorization[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) X-Amzn-[01;31m[KAuthorization[m[K...[0m
+[32mSearching (cased) BEGIN RSA...[0m
+[35m[K./fixtures/privatekeys.json[m[K[36m[K:[m[K[32m[K7[m[K[36m[K:[m[K    "key": "-----[01;31m[KBEGIN RSA[m[K KEY-----QyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W-----END RSA KEY-----",
+[35m[K./fixtures/privatekeys.json[m[K[36m[K:[m[K[32m[K8[m[K[36m[K:[m[K    "rsa": "-----[01;31m[KBEGIN RSA[m[K PRIVATE KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END RSA PRIVATE KEY-----",
+[35m[K./fixtures/privatekeys.xml[m[K[36m[K:[m[K[32m[K9[m[K[36m[K:[m[K      -----[01;31m[KBEGIN RSA[m[K KEY-----
+[35m[K./fixtures/privatekeys.xml[m[K[36m[K:[m[K[32m[K13[m[K[36m[K:[m[K    <rsa>-----[01;31m[KBEGIN RSA[m[K PRIVATE KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END RSA PRIVATE KEY-----</rsa>
+[35m[K./fixtures/privatekeys.yml[m[K[36m[K:[m[K[32m[K7[m[K[36m[K:[m[K  -----[01;31m[KBEGIN RSA[m[K KEY----- \
+[35m[K./fixtures/privatekeys.yml[m[K[36m[K:[m[K[32m[K11[m[K[36m[K:[m[Krsa: "-----[01;31m[KBEGIN RSA[m[K PRIVATE KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END RSA PRIVATE KEY-----"
+[35m[K./fixtures/results-BEGIN RSA[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KBEGIN RSA[m[K...[0m
+[35m[K./fixtures/severity.yml[m[K[36m[K:[m[K[32m[K5[m[K[36m[K:[m[K  rsa: "-----[01;31m[KBEGIN RSA[m[K PRIVATE KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END RSA PRIVATE KEY-----"
+[32mSearching (cased) BEGIN DSA...[0m
+[35m[K./fixtures/privatekeys.json[m[K[36m[K:[m[K[32m[K9[m[K[36m[K:[m[K    "dsa": "-----[01;31m[KBEGIN DSA[m[K PRIVATE KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END DSA PRIVATE KEY-----",
+[35m[K./fixtures/privatekeys.xml[m[K[36m[K:[m[K[32m[K14[m[K[36m[K:[m[K    <dsa>-----[01;31m[KBEGIN DSA[m[K PRIVATE KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END DSA PRIVATE KEY-----</dsa>
+[35m[K./fixtures/privatekeys.yml[m[K[36m[K:[m[K[32m[K12[m[K[36m[K:[m[Kdsa: "-----[01;31m[KBEGIN DSA[m[K PRIVATE KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END DSA PRIVATE KEY-----"
+[35m[K./fixtures/results-BEGIN DSA[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KBEGIN DSA[m[K...[0m
+[32mSearching (cased) BEGIN EC...[0m
+[35m[K./fixtures/privatekeys.json[m[K[36m[K:[m[K[32m[K10[m[K[36m[K:[m[K    "ec": "-----[01;31m[KBEGIN EC[m[K PRIVATE KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END EC PRIVATE KEY-----",
+[35m[K./fixtures/privatekeys.xml[m[K[36m[K:[m[K[32m[K15[m[K[36m[K:[m[K    <ec>-----[01;31m[KBEGIN EC[m[K PRIVATE KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END EC PRIVATE KEY-----</ec>
+[35m[K./fixtures/privatekeys.yml[m[K[36m[K:[m[K[32m[K13[m[K[36m[K:[m[Kec: "-----[01;31m[KBEGIN EC[m[K PRIVATE KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END EC PRIVATE KEY-----"
+[35m[K./fixtures/results-BEGIN EC[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KBEGIN EC[m[K...[0m
+[32mSearching (cased) BEGIN PRIVATE...[0m
+[35m[K./fixtures/privatekeys.json[m[K[36m[K:[m[K[32m[K6[m[K[36m[K:[m[K    "access": "-----[01;31m[KBEGIN PRIVATE[m[K KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END PRIVATE KEY-----",
+[35m[K./fixtures/privatekeys.xml[m[K[36m[K:[m[K[32m[K7[m[K[36m[K:[m[K    <access>-----[01;31m[KBEGIN PRIVATE[m[K KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END PRIVATE KEY-----</access>
+[35m[K./fixtures/privatekeys.yml[m[K[36m[K:[m[K[32m[K5[m[K[36m[K:[m[Kaccess: "-----[01;31m[KBEGIN PRIVATE[m[K KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END PRIVATE KEY-----"
+[35m[K./fixtures/results-BEGIN PRIVATE[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KBEGIN PRIVATE[m[K...[0m
+[32mSearching (cased) BEGIN OPENSSH...[0m
+[35m[K./fixtures/privatekeys.json[m[K[36m[K:[m[K[32m[K11[m[K[36m[K:[m[K    "openssh": "-----[01;31m[KBEGIN OPENSSH[m[K PRIVATE KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END OPENSSH PRIVATE KEY-----"
+[35m[K./fixtures/privatekeys.xml[m[K[36m[K:[m[K[32m[K16[m[K[36m[K:[m[K    <openssh>-----[01;31m[KBEGIN OPENSSH[m[K PRIVATE KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END OPENSSH PRIVATE KEY-----</openssh>
+[35m[K./fixtures/privatekeys.yml[m[K[36m[K:[m[K[32m[K14[m[K[36m[K:[m[Kopenssh: "-----[01;31m[KBEGIN OPENSSH[m[K PRIVATE KEY-----\nQyNTUxOQAAACCtrF27B/zd9DEpd38IbVBy93wSeYXKU0AGXMyO8ePu2QAAAKBSzpYEUs6W\n-----END OPENSSH PRIVATE KEY-----"
+[35m[K./fixtures/results-BEGIN OPENSSH[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KBEGIN OPENSSH[m[K...[0m
+[32mSearching (cased) BEGIN SSH...[0m
+[35m[K./fixtures/results-BEGIN SSH[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KBEGIN SSH[m[K...[0m
+[32mSearching (cased) BEGIN PGP...[0m
+[35m[K./fixtures/results-BEGIN PGP[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KBEGIN PGP[m[K...[0m
+[32mSearching (cased) PuTTY-User-Key...[0m
+[35m[K./fixtures/results-PuTTY-User-Key[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KPuTTY-User-Key[m[K...[0m
+[32mSearching (cased) X-XSRF-TOKEN...[0m
+[35m[K./fixtures/results-X-XSRF-TOKEN[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KX-XSRF-TOKEN[m[K...[0m
+[32mSearching (cased) X-Amzn-Authorization...[0m
+[35m[K./fixtures/results-X-Amzn-Authorization[m[K[36m[K:[m[K[32m[K1[m[K[36m[K:[m[K[32mSearching (cased) [01;31m[KX-Amzn-Authorization[m[K...[0m

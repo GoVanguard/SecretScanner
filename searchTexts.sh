@@ -41,6 +41,7 @@ echo -e "\e[31m############################## NOTE #############################
 searchTermsCase=(
     'AKIA'
     'ASIA'
+    'CLIENT_SECRET'
     'MII'
     'eyJ'
     'SHA 1'
@@ -72,8 +73,8 @@ searchTermsAnyCase=(
     'Username'
     'SecretKey'
     'Key'
-    '\.decode'
-    '\.encode'
+    '.decode'
+    '.encode'
     'Bearer'
     'X-API'
     'https:'
@@ -106,62 +107,63 @@ searchTermsRegEx=(
     'SK[a-z0-9]{32}'
 )
 
-
 grepOpts="-n -I -H --color=always"
 
+echo "" > $1/results
 
 if [ $noisy == true ]
 then
     IFS=""
     for term in ${searchTermsRegEx[@]}
         do
-            echo " "
-            echo -e "\e[32mSearching (regex term) ${term}...\e[0m"
-
-            IFS=""
-            files=$(find $1 -type f)
-            IFS=${O_IFS}
-            for filename in ${files[@]}
-            do
-                fold -sw 160 ${filename} | grep ${grepOpts} -E "${term}" | grep -v "Binary file " | grep -v "node_modules" | sed "s;(standard input);${filename};"
-           done
+            echo -e "\e[32mSearching (regex term) ${term}...\e[0m" 2>&1>> $1/results-${term} && \
+            find $1 -type f -not -regex '.*\.(jpg|jpeg|png|gif|css|scss|dex|svg|zip|7z|rar|apk|ipa)$' | parallel -k -j12 -n 1000 -m LC_ALL=C egrep ${grepOpts} -E "\"${term}\"" --exclude-dir="node_modules" -H 2>&1>> $1/results-${term} &
         done
-    IFS=${O_IFS}
-
-    IFS=""
     for term in ${searchTermsAnyCase[@]}
         do
-            echo " "
-            echo -e "\e[32mSearching (case insensitive) ${term}...\e[0m"
-
-
-            IFS=""
-            files=$(find $1 -type f)
-            IFS=${O_IFS}
-            for filename in ${files[@]}
-            do
-                fold -sw 160 ${filename} | grep ${grepOpts} -i -e "${term}" | grep -v "Binary file " | grep -v "node_modules" | sed "s;(standard input);${filename};"
-            done
+            echo -e "\e[32mSearching (case insensitive) ${term}...\e[0m" 2>&1>> $1/results-${term} && \
+	    find $1 -type f -not -regex '.*\.(jpg|jpeg|png|gif|css|scss|dex|svg|zip|7z|rar|apk|ipa)$' | parallel -k -j12 -n 1000 -m LC_ALL=C egrep ${grepOpts} -i -e "\"${term}\"" --exclude-dir="node_modules" -H 2>&1>> $1/results-${term} &
+        done
+    IFS=${O_IFS}
+    wait
+    IFS=""
+    for term in ${searchTermsRegEx[@]}
+        do
+            cat $1/results-${term} >> $1/results
+            rm $1/results-${term}
+        done
+    for term in ${searchTermsAnyCase[@]}
+        do
+            cat $1/results-${term} >> $1/results
+            rm $1/results-${term}
         done
     IFS=${O_IFS}
 fi
 
-IFS=""
-for term in ${searchTermsCase[@]}
-    do
-        echo " "
-        echo -e "\e[32mSearching (cased) ${term}...\e[0m"
-
-        IFS=""
-        files=$(find $1 -type f)
-        IFS=${O_IFS}
-        for filename in ${files[@]}
+results=""
+if [ $noisy == false ]
+    then
+    IFS=""
+    for term in ${searchTermsCase[@]}
         do
-            fold -sw 160 ${filename} | grep ${grepOpts} -e "${term}" | grep -v "Binary file " | grep -v "node_modules" | sed "s;(standard input);${filename};"
+            echo -e "\e[32mSearching (cased) ${term}...\e[0m" 2>&1>> $1/results-${term} && \
+            find $1 -type f -not -regex '.*\.(jpg|jpeg|png|gif|css|scss|dex|svg|zip|7z|rar|apk|ipa)$' | parallel -k -j12 -n 1000 -m LC_ALL=C egrep ${grepOpts} -E "\"${term}\"" --exclude-dir="node_modules" -H  2>&1>> $1/results-${term} &
         done
-        IFS=${O_IFS}
-    done
-IFS=${O_IFS}
+    IFS=${O_IFS}
+    wait
+    IFS=""
+    for term in ${searchTermsCase[@]}
+        do
+            cat $1/results-${term} >> $1/results
+            rm $1/results-${term}
+        done
+    IFS=${O_IFS}
+fi
+
+echo
+echo
+
+echo -e "\e[32m Results in $1/results\e[0m"
 
 echo
 echo
